@@ -62,3 +62,5 @@ db:
 
 ```
 `docker-compose up`
+
+**Upd** Для удобства можно [назначить доменное имя для проекта](/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html)
