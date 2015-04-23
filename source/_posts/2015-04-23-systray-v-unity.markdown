@@ -25,4 +25,4 @@ sudo apt-get install indicator-systemtray-unity
 
 [Обсуждение на Ubuntu форуме](http://forum.ubuntu.ru/index.php?topic=258603.0)
 
-Если не нравится нажимать на индикатор для доступа к иконкам - жмем на индикаторе среднюю кнопку мыши. Подкорректировать положение док-окна можно через `dconf-editor`, раздел `gsettings:/net/launchpad/indicator/systemtray`
+Если не нравится нажимать на индикатор для доступа к иконкам - жмем на индикаторе среднюю кнопку мыши. Подкорректировать положение док-окна можно через `dconf-editor`, раздел `gsettings:/net/launchpad/indicator/systemtray` или прокруткой среднего колесика мыши на индикаторе
