@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Addictive Blog]]></title>
+  <link href="http://addicted2sounds.github.io/octopress/atom.xml" rel="self"/>
+  <link href="http://addicted2sounds.github.io/octopress/"/>
+  <updated>2015-06-06T10:01:29+03:00</updated>
+  <id>http://addicted2sounds.github.io/octopress/</id>
+  <author>
+    <name><![CDATA[addicted2sounds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Обучение Ruby/RoR]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/obuchieniie-ruby-ror.html"/>
+    <updated>2015-05-23T20:37:34+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/obuchieniie-ruby-ror</id>
+    <content type="html"><![CDATA[<p>Я сам не занимаюсь обучением, я сам обучаюсь. В этом посте выкладываю пару полезных ссылок для обучения.</p>
+
+<!--more-->
+
+
+<h2><a href="http://rusrails.ru/">Rusrails: Ruby on Rails по-русски</a></h2>
+
+<p>С этого сайта я начинал знакомиться с RoR. Крайне полезный и необходимый кладезь информации. Хотя после долгого использования Yii, идеология рельс показалась крайне знакомой. Совершенно не покидало впечатление, что где-то я это уже видел. Синтаксис у руби весьма легкий, названия методов информативные. Так что даже не знакомый с языком человек (обладающий навыками алгоритмизации) поймет, что именно делает приведенный код.
+(Rusrails: Ruby on Rails по-русски)</p>
+
+<p>Нижеприведенные ресурсы на аглийском языке, хотя без элеметарного знания оного в программировании особо нечего делать (как мне кажется)</p>
+
+<h2><a href="http://guides.rubyonrails.org/index.html">RailsGuides</a></h2>
+
+<p>Оригинал документации для RoR. Хотя Rusrails и содержит &ldquo;грамотный&rdquo; и перевод документации, но лично мне иногда проще читать документацию в оригинале. Да и часто оказывается, что не вся документация переведена.</p>
+
+<h2><a href="https://rubymonk.com">RubyMonk</a></h2>
+
+<p>Для детального изучения, углубления в руби просто необходимый сайт. Обучение проходит в интерактивном способе от имени монаха.
+Пригодится, даже знакомым с руби людям. Особенно полезны, разделы посвященные метапрограмированию. Имено с его помощью, происходит большая часть &ldquo;магии&rdquo; RoR.
+More ramen to you! ;)</p>
+
+<h2><a href="http://www.codewars.com/">CodeWars</a></h2>
+
+<p>Чтобы оттачивать мастерство, советую зарегистрироваться и попробовать. Сайт дает возможность попробовать реализовывать простые алгоритмы. Все происходит в игровой форме. Вобщем, особо много рассказывать не буду, лучше просто зарегистрироваться и попробовать.
+Помимо Ruby, присутствуют Python, Javascript, Java.</p>
+
+<h2><a href="https://www.codeschool.com/">Code School</a></h2>
+
+<p>Просто необходимый в запасе архив различного видео. Тематика видео совершенно различная, каждая тема содержит после себя ряд упражнений для закрепления пройденого материала. Одним словом musthave</p>
+
+<hr />
+
+<p>Лично для себя нашел также весьма интересный способ развития - ходить на собеседования. Помимо того, что можно работу получить, можно вынести, во-первых, свой реальный уровень знаний, а также, что необходимо подучить\доучить. Данный раздел возможно будет пополняться ссылками, если вспомню\найду еще что-либо полезное.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Необходимые Gems для Rails]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/neohhodimyie-gems-dlia-rails.html"/>
+    <updated>2015-04-25T08:49:47+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/neohhodimyie-gems-dlia-rails</id>
+    <content type="html"><![CDATA[<p>Rails - замечательный фреймворк. С его использованием разработка становится легкой и приятной.</p>
+
+<p>При разработке нового проекта постоянно приходится добавлять некоторые гемы. Ниже представлен обновляющийся список необходимых.</p>
+
+<!--more-->
+
+
+<h3>Haml</h3>
+
+<p>Вы еще не используете <a href="http://haml.info/">HAML</a>? Для меня обычный Erb утрачен с его поялением. Попробуйте <a href="http://haml.info/tutorial.html">tutorial</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem "haml-rails", "~&gt; 0.9"
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Для конвертации ваших erb в haml есть следущая команда:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake haml:erb2haml</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Rspec</h3>
+
+<p>На Rails писать тесты <a href="http://rusrails.ru/a-guide-to-testing-rails-applications">просто и приятно</a>. С Rspec это делать еще легче. Если только знакомитесь с rspec, то обязательно прочитайте <a href="http://betterspecs.org/ru/">это</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>group :development, :test do
+</span><span class='line'>  gem 'rspec-rails'
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>С началом использования тестов, браузер при разработке используется все реже и реже. Для ин</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate rspec:install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Factory Girl</h3>
+
+<p>Отличная замена стандартным фикстурам. Про &ldquo;плюсы&rdquo; использования написано уже предостаточно.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>group :development, :test do
+</span><span class='line'>  gem 'factory_girl_rails'
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://github.com/thoughtbot/factory_girl_rails">Официальный репозиторий</a>. Для удобства можно добавить в <code>spec/rails_helper.rb</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>config.include FactoryGirl::Syntax::Methods
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Faker</h3>
+
+<p>Можно и самому писать придуманные строчки и данные, но гораздо легче и приятней воспользоваться <a href="https://github.com/stympy/faker">Faker</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>group :development, :test do
+</span><span class='line'>  gem 'faker'
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Database cleaner</h3>
+
+<p>Не загрязнять нашу базу тестовыми данными поможет <a href="https://github.com/DatabaseCleaner/database_cleaner">Database Cleaner</a>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>group :development, :test do
+</span><span class='line'>  gem 'database_cleaner'
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Для подключения в проект редактируем <code>spec/spec_helper.rb</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RSpec.configure do |config|
+</span><span class='line'>
+</span><span class='line'>  config.before(:suite) do
+</span><span class='line'>    DatabaseCleaner.strategy = :transaction
+</span><span class='line'>    DatabaseCleaner.clean_with(:truncation)
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  config.around(:each) do |example|
+</span><span class='line'>    DatabaseCleaner.cleaning do
+</span><span class='line'>      example.run
+</span><span class='line'>    end
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Bootstrap</h3>
+
+<p>Для симпатичного внешнего вида лучшие косметологи мира рекомендуют <a href="http://getbootstrap.com/">Bootstrap</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'bootstrap-sass'
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p>Поскольку эти гемы используются почти в каждом проекте, то при использовании rvm лучше установить их в глобальный gemset:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rvm @global do gem install rails haml-rails faker capistrano-rails factory_girl_rails database_cleaner
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>нужное - добавить, ненужное - убрать</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Systray в Unity]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/systray-v-unity.html"/>
+    <updated>2015-04-23T02:35:08+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/systray-v-unity</id>
+    <content type="html"><![CDATA[<p>Из Unity окончательно убрали значки в трее с последним обновлением. Долгое время для борьбы с этим помогал такой вариант:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-add-repository ppa:gurqn/systray-trusty
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p>К сожалению, этот способ больше не работает теперь. Для тех кому все же необходимы значки в трее (некоторые программы все же появляются там) поможет решение <code>Indicator Systemtray Unity</code>. Установка проста:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-add-repository ppa:fixnix/indicator-systemtray-unity
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install indicator-systemtray-unity
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://github.com/GGleb/indicator-systemtray-unity">Исходник на GitHub</a></p>
+
+<p><a href="http://forum.ubuntu.ru/index.php?topic=258603.0">Обсуждение на Ubuntu форуме</a></p>
+
+<p>Если не нравится нажимать на индикатор для доступа к иконкам - жмем на индикаторе среднюю кнопку мыши. Подкорректировать положение док-окна можно через <code>dconf-editor</code>, раздел <code>gsettings:/net/launchpad/indicator/systemtray</code> или прокруткой среднего колесика мыши на индикаторе</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Добавляем SkyDNS к среде разработки на Docker]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html"/>
+    <updated>2015-04-21T20:10:02+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/skynetservices/skydns1">SkyDns</a> - это маленький динамический DNS сервер, написаный на <code>Go</code>. Для автоматического назначения доменов контейнерам докера можно использовать <a href="https://github.com/crosbymichael/skydock">SkyDock</a>. Такая связка позволяет не мучиться с поиском айпи нужного контейнера в системе или запускать несколько контейнеров и позволить им общаться между собой. Кому лень читать горы документации или лень учить английский, читаем дальше.</p>
+
+<!--more-->
+
+
+<p>Для начала нужно получить образы вышеназванных утилит.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker pull crosbymichael/skydns
+</span><span class='line'>docker pull crosbymichael/skydock
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>После закачки образов можно приступить к созданию контейнеров:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker run -d -p 172.17.42.1:53:53/udp --name skydns crosbymichael/skydns -nameserver 8.8.8.8:53 -domain dev 
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker run -d -v /var/run/docker.sock:/docker.sock --name skydock crosbymichael/skydock -ttl 30 -environment dev -s /docker.sock -domain docker -name dev </span></code></pre></td></tr></table></div></figure>
+
+
+<p>Вместо <code>-domain dev</code> и <code>-name dev</code> выбираем любую понравивушюся доменную зону. <code>-nameserver 8.8.8.8:53</code> указывает каким нс сервером пользоваться, если спрашивается неизвестный SkyDns адрес.</p>
+
+<p>Теперь можно легко стартовать</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker start skydock
+</span><span class='line'>docker start skynds 
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>или останавливать связку</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker stop skydock
+</span><span class='line'>docker stop skynds 
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Для удобства можно добавить старт сервисов в автозагрузку.</p>
+
+<p>Для Ubuntu, делается так:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/systemd/system/skydns.service
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[Unit]
+</span><span class='line'>Description=SkyDNS
+</span><span class='line'>Requires=docker.service
+</span><span class='line'>
+</span><span class='line'>[Service]
+</span><span class='line'>Restart=always
+</span><span class='line'>ExecStart=/usr/bin/docker start -a skydns
+</span><span class='line'>ExecStop=/usr/bin/docker stop -t 2 skydns
+</span><span class='line'>
+</span><span class='line'>[Install]
+</span><span class='line'>WantedBy=multi-user.target
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo nano /etc/systemd/system/skydock.service
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[Unit]
+</span><span class='line'>Description=SkyDock
+</span><span class='line'>After=docker.service
+</span><span class='line'>Requires=skydns.service
+</span><span class='line'>
+</span><span class='line'>[Service]
+</span><span class='line'>Restart=always
+</span><span class='line'>ExecStart=/usr/bin/docker start -a skydock
+</span><span class='line'>ExecStop=/usr/bin/docker stop -t 2 skydock
+</span><span class='line'>
+</span><span class='line'>[Install]
+</span><span class='line'>WantedBy=multi-user.target
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Теперь осталось прописать хост для контейнера. Для примера с compose, это делается просто (на примере к нашей <a href="http://addicted2sounds.github.io/octopress/bystryi-start-s-docker.html">среде разработки</a> для php):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>web:
+</span><span class='line'>  build: .
+</span><span class='line'>  hostname: project.dev
+</span><span class='line'>  links:
+</span><span class='line'>   - db:mysql
+</span><span class='line'>  expose:
+</span><span class='line'>  - 80
+</span><span class='line'>  volumes: 
+</span><span class='line'>   - ./web:/var/www/html
+</span><span class='line'>
+</span><span class='line'>db:
+</span><span class='line'>  image: mariadb
+</span><span class='line'>  hostname: db.project.dev
+</span><span class='line'>  environment:
+</span><span class='line'>    MYSQL_ROOT_PASSWORD: password
+</span><span class='line'>    MYSQL_USER: user
+</span><span class='line'>    MYSQL_PASSWORD: password
+</span><span class='line'>    MYSQL_DATABASE: project
+</span><span class='line'>  volumes:
+</span><span class='line'>    - /var/lib/mysql
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[4 совета для грамотной работы с CSS]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html"/>
+    <updated>2015-04-20T03:13:32+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css</id>
+    <content type="html"><![CDATA[<p>Достаточно взглянуть на <a href="http://www.creativebloq.com/web-design/examples-css-912710">удивительные вещи</a>, которые люди делают с поммощью CSS, чтобы понять - язык меняется. Люди создают <a href="http://www.creativebloq.com/css3/animation-with-css3-712437">ошеломляющие анимации</a> и <a href="http://www.creativebloq.com/css3/css-images-712440">удивительные композиции</a>.</p>
+
+<p>Будь вы только начинающим, или имеете несколько лет стажа за плечами - ландшафт для разработки CSS разительно поменялся за последние несколько лет. Сейчас есть множество инструментов в вашем распоряжении, которые помогут создать высококачественный и в тоже время короткий CSS.</p>
+
+<!--more-->
+
+
+<p>Ниже несколько приемов от <a href="http://www.creativebloq.com/web-design/4-tips-smarter-css-workflow-11514036">Jonathan Snook</a>, которые помогут создать легковесный и быстрый CSS</p>
+
+<h3>01. Найдите неиспользуемый код</h3>
+
+<p>Со временем проэкты меняют внешний вид, а CSS может остаться прежним. Неиспользуемый CSS влияет на производительность, отсылая бесполезный код браузеру и заставляя его работать, чтобы определить какие стили должны быть применены.</p>
+
+<p><a href="https://github.com/giakki/uncss">UnCSS</a> берет список всех используемых файлов (ссылок) и проверяет наличие HTML используеющего стиль, после чего выдает CSS файл, содержащий только используемые стили.</p>
+
+<p>UnCSS требует скомпилированого HTML и CSS, а потому может быть не настолько полезен в процессе разработки.</p>
+
+<h3>02. Определите дублирующийся код</h3>
+
+<p>При создании вы работаете с определенными кусочками дизайна. Когда все сделано, вы можете не осознавать, что множество стилей для модального окна, на самом деле очень схожи со стилями для выпадающего списка.</p>
+
+<p><a href="http://zmoazeni.github.io/csscss/">csscss</a> - чекер на избыточность, поможет определить одинаковые свойства используемые вашим CSS, что поможет объединить несколько правил в одно.</p>
+
+<h3>03. Определите &ldquo;плохой&rdquo; код</h3>
+
+<p>Вы определили дублирующийся и не используемый код. Какие еще улучшения можно привнести в наш CSS? <a href="https://github.com/katiefenn/parker">Parker</a> и <a href="https://github.com/macbre/analyze-css">analyze-css</a> - два инструмента, которые помогут оценить качество вашего кода.</p>
+
+<p>И <em>Parker</em>, и <em>analyze-css</em> могут помочь найти части кода, которые подлежат рефакторингу либо их можно упростить.</p>
+
+<h3>04. Пишите &ldquo;хороший&rdquo; код</h3>
+
+<p>Избавление от &ldquo;плохого&rdquo; кода - это конечно же хорошо, но почему-бы не писать сразу &ldquo;хороший&rdquo; код? Специально для этого есть руководства:
+<a href="http://cssguidelin.es/">Руководство по CSS</a> <a href="http://sass-guidelin.es/">Руководство по SASS</a>. Также рекомендуется к прочтению <a href="http://smacss.com/">SMACSS</a>, где можно почерпнуть идеи, как писать модульный сжатый код для вашего проекта</p>
+
+<p><em>Перевод. <a href="http://www.creativebloq.com/web-design/4-tips-smarter-css-workflow-11514036">4 tips for a smarter CSS workflow</a></em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Быстрый старт с Docker]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/bystryi-start-s-docker.html"/>
+    <updated>2015-04-17T13:23:43+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/bystryi-start-s-docker</id>
+    <content type="html"><![CDATA[<p>Давно собирался - и вот пришел момент необходимости начать использовать <em>Docker</em>, вместо привычного <em>Vagrant</em>. Все не хватало времени разобраться с ним и особо пугали длинные строчки для запуска контейнера, вместо привычного <code>vagrant up</code>.
+Как оказалось, в <em>Docker</em> тоже есть легкий старт - <code>docker compose</code>.<!--more--></p>
+
+<p>Подробно почитать о установке и использовании можно <a href="https://docs.docker.com/compose/">в оригинале</a>.</p>
+
+<p>Установка <em>compose</em> производится отдельно от <em>Docker</em>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
+</span><span class='line'>chmod +x /usr/local/bin/docker-compose</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Также можно использовать <em>Python package</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pip install -U docker-compose</span></code></pre></td></tr></table></div></figure>
+
+
+<p>После этого привычный запуск сервера превращается в команду <code>docker-compose up</code>.</p>
+
+<h3>Конфигурация для запуска PHP проекта</h3>
+
+<p>Достаточно добавить к проекту пару файлов</p>
+
+<p><em>Dockerfile:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># построить на базе официального контейнера
+</span><span class='line'>FROM php:5.6-apache 
+</span><span class='line'># включить rewrite модуль апаче
+</span><span class='line'>RUN a2enmod rewrite 
+</span><span class='line'># установка дополнительных php модулей
+</span><span class='line'>RUN docker-php-ext-install mysql mysqli pdo pdo_mysql 
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>docker-compose.yaml:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>web:
+</span><span class='line'>  # Используем Dockerfile из текущей директории для построения образа
+</span><span class='line'>  build: .
+</span><span class='line'>  # Соединить с контейнером db
+</span><span class='line'>  links:
+</span><span class='line'>   - db:mysql
+</span><span class='line'>  # Открыть порт контейнера
+</span><span class='line'>  ports:
+</span><span class='line'>   - 8080:80
+</span><span class='line'>  # использовать исходники из текущей директории 
+</span><span class='line'>  volumes: 
+</span><span class='line'>   - .:/var/www/html
+</span><span class='line'>
+</span><span class='line'>db:
+</span><span class='line'>  image: mariadb
+</span><span class='line'>  environment:
+</span><span class='line'>    MYSQL_ROOT_PASSWORD: example
+</span><span class='line'>    MYSQL_USER: wp_user
+</span><span class='line'>    MYSQL_PASSWORD: password
+</span><span class='line'>    MYSQL_DATABASE: wordpress
+</span><span class='line'>  volumes:
+</span><span class='line'>  # хранить данные бд в отдельном контейнере
+</span><span class='line'>    - /var/lib/mysql
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>docker-compose up</code></p>
+
+<p><strong>Upd</strong> Для удобства можно <a href="http://addicted2sounds.github.io/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html">назначить доменное имя для проекта</a></p>
+]]></content>
+  </entry>
+  
+</feed>

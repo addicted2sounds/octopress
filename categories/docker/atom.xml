@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Docker | Addictive Blog]]></title>
+  <link href="http://addicted2sounds.github.io/octopress//categories/docker/atom.xml" rel="self"/>
+  <link href="http://addicted2sounds.github.io/octopress/"/>
+  <updated>2015-06-06T10:01:29+03:00</updated>
+  <id>http://addicted2sounds.github.io/octopress/</id>
+  <author>
+    <name><![CDATA[addicted2sounds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Добавляем SkyDNS к среде разработки на Docker]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html"/>
+    <updated>2015-04-21T20:10:02+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/skynetservices/skydns1">SkyDns</a> - это маленький динамический DNS сервер, написаный на <code>Go</code>. Для автоматического назначения доменов контейнерам докера можно использовать <a href="https://github.com/crosbymichael/skydock">SkyDock</a>. Такая связка позволяет не мучиться с поиском айпи нужного контейнера в системе или запускать несколько контейнеров и позволить им общаться между собой. Кому лень читать горы документации или лень учить английский, читаем дальше.</p>
+
+<!--more-->
+
+
+<p>Для начала нужно получить образы вышеназванных утилит.
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker pull crosbymichael/skydns
+</span><span class='line'>docker pull crosbymichael/skydock&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;pre&gt;&lt;code&gt;После закачки образов можно приступить к созданию контейнеров: 
+</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;docker run -d -p 172.17.42.1:53:53/udp &ndash;name skydns crosbymichael/skydns -nameserver 8.8.8.8:53 -domain dev&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;&lt;code&gt;
+</span><span class='line'>&lt;/code&gt;
+</span><span class='line'>docker run -d -v /var/run/docker.sock:/docker.sock &ndash;name skydock crosbymichael/skydock -ttl 30 -environment dev -s /docker.sock -domain docker -name dev</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Вместо <code>-domain dev</code> и <code>-name dev</code> выбираем любую понравивушюся доменную зону. <code>-nameserver 8.8.8.8:53</code> указывает каким нс сервером пользоваться, если спрашивается неизвестный SkyDns адрес.</p>
+
+<p>Теперь можно легко стартовать
+&#8220;`
+docker start skydock
+docker start skynds</p>
+
+<pre><code>или останавливать связку 
+</code></pre>
+
+<p>docker stop skydock
+docker stop skynds</p>
+
+<pre><code>Для удобства можно добавить старт сервисов в автозагрузку. 
+
+Для Ubuntu, делается так:
+</code></pre>
+
+<p>sudo nano /etc/systemd/system/skydns.service</p>
+
+<p><code>
+</code>
+[Unit]
+Description=SkyDNS
+Requires=docker.service</p>
+
+<p>[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a skydns
+ExecStop=/usr/bin/docker stop -t 2 skydns</p>
+
+<p>[Install]
+WantedBy=multi-user.target</p>
+
+<p><code>
+</code>
+sudo nano /etc/systemd/system/skydock.service</p>
+
+<p><code>
+</code>
+[Unit]
+Description=SkyDock
+After=docker.service
+Requires=skydns.service</p>
+
+<p>[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a skydock
+ExecStop=/usr/bin/docker stop -t 2 skydock</p>
+
+<p>[Install]
+WantedBy=multi-user.target</p>
+
+<pre><code>Теперь осталось прописать хост для контейнера. Для примера с compose, это делается просто (на примере к нашей [среде разработки](/bystryi-start-s-docker.html) для php):
+</code></pre>
+
+<p>web:
+  build: .
+  hostname: project.dev
+  links:
+   - db:mysql
+  expose:
+  - 80
+  volumes:
+   - ./web:/var/www/html</p>
+
+<p>db:
+  image: mariadb
+  hostname: db.project.dev
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+    MYSQL_USER: user
+    MYSQL_PASSWORD: password
+    MYSQL_DATABASE: project
+  volumes:
+    - /var/lib/mysql</p>
+
+<p>&#8220;`</p>
+]]></content>
+  </entry>
+  
+</feed>

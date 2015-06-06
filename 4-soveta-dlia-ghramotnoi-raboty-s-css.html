@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>4 совета для грамотной работы с CSS - Addictive Blog</title>
+  <meta name="author" content="addicted2sounds">
+
+  
+  <meta name="description" content="Достаточно взглянуть на удивительные вещи, которые люди делают с поммощью CSS, чтобы понять - язык меняется. Люди создают ошеломляющие анимации и &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html">
+  <link href="/octopress/favicon.png" rel="icon">
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/octopress/atom.xml" rel="alternate" title="Addictive Blog" type="application/atom+xml">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-62066662-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/octopress/">Addictive Blog</a></h1>
+  
+    <h2>Хроники зависимости.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="addicted2sounds.github.io/octopress">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/octopress/">Главная</a></li>
+  <li><a href="/octopress/blog/archives">Архив</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">4 совета для грамотной работы с CSS</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-20T03:13:32+03:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:13 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://addicted2sounds.github.io/octopress">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Достаточно взглянуть на <a href="http://www.creativebloq.com/web-design/examples-css-912710">удивительные вещи</a>, которые люди делают с поммощью CSS, чтобы понять - язык меняется. Люди создают <a href="http://www.creativebloq.com/css3/animation-with-css3-712437">ошеломляющие анимации</a> и <a href="http://www.creativebloq.com/css3/css-images-712440">удивительные композиции</a>.</p>
+
+<p>Будь вы только начинающим, или имеете несколько лет стажа за плечами - ландшафт для разработки CSS разительно поменялся за последние несколько лет. Сейчас есть множество инструментов в вашем распоряжении, которые помогут создать высококачественный и в тоже время короткий CSS.</p>
+
+<!--more-->
+
+
+<p>Ниже несколько приемов от <a href="http://www.creativebloq.com/web-design/4-tips-smarter-css-workflow-11514036">Jonathan Snook</a>, которые помогут создать легковесный и быстрый CSS</p>
+
+<h3>01. Найдите неиспользуемый код</h3>
+
+<p>Со временем проэкты меняют внешний вид, а CSS может остаться прежним. Неиспользуемый CSS влияет на производительность, отсылая бесполезный код браузеру и заставляя его работать, чтобы определить какие стили должны быть применены.</p>
+
+<p><a href="https://github.com/giakki/uncss">UnCSS</a> берет список всех используемых файлов (ссылок) и проверяет наличие HTML используеющего стиль, после чего выдает CSS файл, содержащий только используемые стили.</p>
+
+<p>UnCSS требует скомпилированого HTML и CSS, а потому может быть не настолько полезен в процессе разработки.</p>
+
+<h3>02. Определите дублирующийся код</h3>
+
+<p>При создании вы работаете с определенными кусочками дизайна. Когда все сделано, вы можете не осознавать, что множество стилей для модального окна, на самом деле очень схожи со стилями для выпадающего списка.</p>
+
+<p><a href="http://zmoazeni.github.io/csscss/">csscss</a> - чекер на избыточность, поможет определить одинаковые свойства используемые вашим CSS, что поможет объединить несколько правил в одно.</p>
+
+<h3>03. Определите &ldquo;плохой&rdquo; код</h3>
+
+<p>Вы определили дублирующийся и не используемый код. Какие еще улучшения можно привнести в наш CSS? <a href="https://github.com/katiefenn/parker">Parker</a> и <a href="https://github.com/macbre/analyze-css">analyze-css</a> - два инструмента, которые помогут оценить качество вашего кода.</p>
+
+<p>И <em>Parker</em>, и <em>analyze-css</em> могут помочь найти части кода, которые подлежат рефакторингу либо их можно упростить.</p>
+
+<h3>04. Пишите &ldquo;хороший&rdquo; код</h3>
+
+<p>Избавление от &ldquo;плохого&rdquo; кода - это конечно же хорошо, но почему-бы не писать сразу &ldquo;хороший&rdquo; код? Специально для этого есть руководства:
+<a href="http://cssguidelin.es/">Руководство по CSS</a> <a href="http://sass-guidelin.es/">Руководство по SASS</a>. Также рекомендуется к прочтению <a href="http://smacss.com/">SMACSS</a>, где можно почерпнуть идеи, как писать модульный сжатый код для вашего проекта</p>
+
+<p><em>Перевод. <a href="http://www.creativebloq.com/web-design/4-tips-smarter-css-workflow-11514036">4 tips for a smarter CSS workflow</a></em></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">addicted2sounds</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-04-20T03:13:32+03:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:13 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='//categories/css/'>css</a>, <a class='category' href='//categories/frontend/'>frontend</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html" data-via="addicted2sounds" data-counturl="http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/octopress/bystryi-start-s-docker.html" title="Previous Post: Быстрый старт с Docker">&laquo; Быстрый старт с Docker</a>
+      
+      
+        <a class="basic-alignment right" href="/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html" title="Next Post: Добавляем SkyDNS к среде разработки на Docker">Добавляем SkyDNS к среде разработки на Docker &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/octopress/obuchieniie-ruby-ror.html">Обучение Ruby/RoR</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/neohhodimyie-gems-dlia-rails.html">Необходимые Gems для Rails</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/systray-v-unity.html">Systray в Unity</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html">Добавляем SkyDNS к среде разработки на Docker</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html">4 совета для грамотной работы с CSS</a>
+      </li>
+    
+  </ul>
+</section>
+
+<form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=in/GEfq', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Введите ваш Email:</p><p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="in/GEfq" name="uri"/><input type="hidden" name="loc" value="ru_RU"/><input type="submit" value="Subscribe" /><p>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></p></form>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - addicted2sounds -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'addicted2sounds';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html';
+        var disqus_url = 'http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

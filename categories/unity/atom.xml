@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Unity | Addictive Blog]]></title>
+  <link href="http://addicted2sounds.github.io/octopress//categories/unity/atom.xml" rel="self"/>
+  <link href="http://addicted2sounds.github.io/octopress/"/>
+  <updated>2015-06-06T10:01:29+03:00</updated>
+  <id>http://addicted2sounds.github.io/octopress/</id>
+  <author>
+    <name><![CDATA[addicted2sounds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Systray в Unity]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/systray-v-unity.html"/>
+    <updated>2015-04-23T02:35:08+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/systray-v-unity</id>
+    <content type="html"><![CDATA[<p>Из Unity окончательно убрали значки в трее с последним обновлением. Долгое время для борьбы с этим помогал такой вариант:
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-add-repository ppa:gurqn/systray-trusty
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get upgrade&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;```&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;!--more--&gt;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;К сожалению, этот способ больше не работает теперь. Для тех кому все же необходимы значки в трее (некоторые программы все же появляются там) поможет решение &lt;code&gt;Indicator Systemtray Unity&lt;/code&gt;. Установка проста:</span></code></pre></td></tr></table></div></figure>
+sudo apt-add-repository ppa:fixnix/indicator-systemtray-unity
+sudo apt-get update
+sudo apt-get install indicator-systemtray-unity</p>
+
+<p>&#8220;`</p>
+
+<p><a href="https://github.com/GGleb/indicator-systemtray-unity">Исходник на GitHub</a></p>
+
+<p><a href="http://forum.ubuntu.ru/index.php?topic=258603.0">Обсуждение на Ubuntu форуме</a></p>
+
+<p>Если не нравится нажимать на индикатор для доступа к иконкам - жмем на индикаторе среднюю кнопку мыши. Подкорректировать положение док-окна можно через <code>dconf-editor</code>, раздел <code>gsettings:/net/launchpad/indicator/systemtray</code> или прокруткой среднего колесика мыши на индикаторе</p>
+]]></content>
+  </entry>
+  
+</feed>

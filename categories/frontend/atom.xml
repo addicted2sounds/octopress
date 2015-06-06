@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Frontend | Addictive Blog]]></title>
+  <link href="http://addicted2sounds.github.io/octopress//categories/frontend/atom.xml" rel="self"/>
+  <link href="http://addicted2sounds.github.io/octopress/"/>
+  <updated>2015-06-06T10:01:29+03:00</updated>
+  <id>http://addicted2sounds.github.io/octopress/</id>
+  <author>
+    <name><![CDATA[addicted2sounds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[4 совета для грамотной работы с CSS]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html"/>
+    <updated>2015-04-20T03:13:32+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css</id>
+    <content type="html"><![CDATA[<p>Достаточно взглянуть на <a href="http://www.creativebloq.com/web-design/examples-css-912710">удивительные вещи</a>, которые люди делают с поммощью CSS, чтобы понять - язык меняется. Люди создают <a href="http://www.creativebloq.com/css3/animation-with-css3-712437">ошеломляющие анимации</a> и <a href="http://www.creativebloq.com/css3/css-images-712440">удивительные композиции</a>.</p>
+
+<p>Будь вы только начинающим, или имеете несколько лет стажа за плечами - ландшафт для разработки CSS разительно поменялся за последние несколько лет. Сейчас есть множество инструментов в вашем распоряжении, которые помогут создать высококачественный и в тоже время короткий CSS.</p>
+
+<!--more-->
+
+
+<p>Ниже несколько приемов от <a href="http://www.creativebloq.com/web-design/4-tips-smarter-css-workflow-11514036">Jonathan Snook</a>, которые помогут создать легковесный и быстрый CSS</p>
+
+<h3>01. Найдите неиспользуемый код</h3>
+
+<p>Со временем проэкты меняют внешний вид, а CSS может остаться прежним. Неиспользуемый CSS влияет на производительность, отсылая бесполезный код браузеру и заставляя его работать, чтобы определить какие стили должны быть применены.</p>
+
+<p><a href="https://github.com/giakki/uncss">UnCSS</a> берет список всех используемых файлов (ссылок) и проверяет наличие HTML используеющего стиль, после чего выдает CSS файл, содержащий только используемые стили.</p>
+
+<p>UnCSS требует скомпилированого HTML и CSS, а потому может быть не настолько полезен в процессе разработки.</p>
+
+<h3>02. Определите дублирующийся код</h3>
+
+<p>При создании вы работаете с определенными кусочками дизайна. Когда все сделано, вы можете не осознавать, что множество стилей для модального окна, на самом деле очень схожи со стилями для выпадающего списка.</p>
+
+<p><a href="http://zmoazeni.github.io/csscss/">csscss</a> - чекер на избыточность, поможет определить одинаковые свойства используемые вашим CSS, что поможет объединить несколько правил в одно.</p>
+
+<h3>03. Определите &ldquo;плохой&rdquo; код</h3>
+
+<p>Вы определили дублирующийся и не используемый код. Какие еще улучшения можно привнести в наш CSS? <a href="https://github.com/katiefenn/parker">Parker</a> и <a href="https://github.com/macbre/analyze-css">analyze-css</a> - два инструмента, которые помогут оценить качество вашего кода.</p>
+
+<p>И <em>Parker</em>, и <em>analyze-css</em> могут помочь найти части кода, которые подлежат рефакторингу либо их можно упростить.</p>
+
+<h3>04. Пишите &ldquo;хороший&rdquo; код</h3>
+
+<p>Избавление от &ldquo;плохого&rdquo; кода - это конечно же хорошо, но почему-бы не писать сразу &ldquo;хороший&rdquo; код? Специально для этого есть руководства:
+<a href="http://cssguidelin.es/">Руководство по CSS</a> <a href="http://sass-guidelin.es/">Руководство по SASS</a>. Также рекомендуется к прочтению <a href="http://smacss.com/">SMACSS</a>, где можно почерпнуть идеи, как писать модульный сжатый код для вашего проекта</p>
+
+<p><em>Перевод. <a href="http://www.creativebloq.com/web-design/4-tips-smarter-css-workflow-11514036">4 tips for a smarter CSS workflow</a></em></p>
+]]></content>
+  </entry>
+  
+</feed>

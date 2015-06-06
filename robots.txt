@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://addicted2sounds.github.io/octopress/sitemap.xml 

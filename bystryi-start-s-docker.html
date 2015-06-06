@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Быстрый старт с Docker - Addictive Blog</title>
+  <meta name="author" content="addicted2sounds">
+
+  
+  <meta name="description" content="Давно собирался - и вот пришел момент необходимости начать использовать Docker, вместо привычного Vagrant. Все не хватало времени разобраться с ним и &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://addicted2sounds.github.io/octopress/bystryi-start-s-docker.html">
+  <link href="/octopress/favicon.png" rel="icon">
+  <link href="/octopress/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/octopress/atom.xml" rel="alternate" title="Addictive Blog" type="application/atom+xml">
+  <script src="/octopress/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/octopress/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-62066662-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/octopress/">Addictive Blog</a></h1>
+  
+    <h2>Хроники зависимости.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/octopress/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="addicted2sounds.github.io/octopress">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/octopress/">Главная</a></li>
+  <li><a href="/octopress/blog/archives">Архив</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Быстрый старт с Docker</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-17T13:23:43+03:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:23 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://addicted2sounds.github.io/octopress">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Давно собирался - и вот пришел момент необходимости начать использовать <em>Docker</em>, вместо привычного <em>Vagrant</em>. Все не хватало времени разобраться с ним и особо пугали длинные строчки для запуска контейнера, вместо привычного <code>vagrant up</code>.
+Как оказалось, в <em>Docker</em> тоже есть легкий старт - <code>docker compose</code>.<!--more--></p>
+
+<p>Подробно почитать о установке и использовании можно <a href="https://docs.docker.com/compose/">в оригинале</a>.</p>
+
+<p>Установка <em>compose</em> производится отдельно от <em>Docker</em>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
+</span><span class='line'>chmod +x /usr/local/bin/docker-compose</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Также можно использовать <em>Python package</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo pip install -U docker-compose</span></code></pre></td></tr></table></div></figure>
+
+
+<p>После этого привычный запуск сервера превращается в команду <code>docker-compose up</code>.</p>
+
+<h3>Конфигурация для запуска PHP проекта</h3>
+
+<p>Достаточно добавить к проекту пару файлов</p>
+
+<p><em>Dockerfile:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># построить на базе официального контейнера
+</span><span class='line'>FROM php:5.6-apache 
+</span><span class='line'># включить rewrite модуль апаче
+</span><span class='line'>RUN a2enmod rewrite 
+</span><span class='line'># установка дополнительных php модулей
+</span><span class='line'>RUN docker-php-ext-install mysql mysqli pdo pdo_mysql 
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>docker-compose.yaml:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>web:
+</span><span class='line'>  # Используем Dockerfile из текущей директории для построения образа
+</span><span class='line'>  build: .
+</span><span class='line'>  # Соединить с контейнером db
+</span><span class='line'>  links:
+</span><span class='line'>   - db:mysql
+</span><span class='line'>  # Открыть порт контейнера
+</span><span class='line'>  ports:
+</span><span class='line'>   - 8080:80
+</span><span class='line'>  # использовать исходники из текущей директории 
+</span><span class='line'>  volumes: 
+</span><span class='line'>   - .:/var/www/html
+</span><span class='line'>
+</span><span class='line'>db:
+</span><span class='line'>  image: mariadb
+</span><span class='line'>  environment:
+</span><span class='line'>    MYSQL_ROOT_PASSWORD: example
+</span><span class='line'>    MYSQL_USER: wp_user
+</span><span class='line'>    MYSQL_PASSWORD: password
+</span><span class='line'>    MYSQL_DATABASE: wordpress
+</span><span class='line'>  volumes:
+</span><span class='line'>  # хранить данные бд в отдельном контейнере
+</span><span class='line'>    - /var/lib/mysql
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>docker-compose up</code></p>
+
+<p><strong>Upd</strong> Для удобства можно <a href="/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html">назначить доменное имя для проекта</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">addicted2sounds</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-04-17T13:23:43+03:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:23 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='//categories/razrabotka/'>Разработка</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://addicted2sounds.github.io/octopress/bystryi-start-s-docker.html" data-via="addicted2sounds" data-counturl="http://addicted2sounds.github.io/octopress/bystryi-start-s-docker.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html" title="Next Post: 4 совета для грамотной работы с CSS">4 совета для грамотной работы с CSS &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/octopress/obuchieniie-ruby-ror.html">Обучение Ruby/RoR</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/neohhodimyie-gems-dlia-rails.html">Необходимые Gems для Rails</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/systray-v-unity.html">Systray в Unity</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/dobavliaiem-skydns-k-sriede-razrabotki-na-docker.html">Добавляем SkyDNS к среде разработки на Docker</a>
+      </li>
+    
+      <li class="post">
+        <a href="/octopress/4-soveta-dlia-ghramotnoi-raboty-s-css.html">4 совета для грамотной работы с CSS</a>
+      </li>
+    
+  </ul>
+</section>
+
+<form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=in/GEfq', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Введите ваш Email:</p><p><input type="text" style="width:140px" name="email"/></p><input type="hidden" value="in/GEfq" name="uri"/><input type="hidden" name="loc" value="ru_RU"/><input type="submit" value="Subscribe" /><p>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></p></form>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - addicted2sounds -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'addicted2sounds';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://addicted2sounds.github.io/octopress/bystryi-start-s-docker.html';
+        var disqus_url = 'http://addicted2sounds.github.io/octopress/bystryi-start-s-docker.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

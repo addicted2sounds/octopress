@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby on Rails | Addictive Blog]]></title>
+  <link href="http://addicted2sounds.github.io/octopress//categories/ruby-on-rails/atom.xml" rel="self"/>
+  <link href="http://addicted2sounds.github.io/octopress/"/>
+  <updated>2015-06-06T10:01:29+03:00</updated>
+  <id>http://addicted2sounds.github.io/octopress/</id>
+  <author>
+    <name><![CDATA[addicted2sounds]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Обучение Ruby/RoR]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/obuchieniie-ruby-ror.html"/>
+    <updated>2015-05-23T20:37:34+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/obuchieniie-ruby-ror</id>
+    <content type="html"><![CDATA[<p>Я сам не занимаюсь обучением, я сам обучаюсь. В этом посте выкладываю пару полезных ссылок для обучения.</p>
+
+<!--more-->
+
+
+<h2><a href="http://rusrails.ru/">Rusrails: Ruby on Rails по-русски</a></h2>
+
+<p>С этого сайта я начинал знакомиться с RoR. Крайне полезный и необходимый кладезь информации. Хотя после долгого использования Yii, идеология рельс показалась крайне знакомой. Совершенно не покидало впечатление, что где-то я это уже видел. Синтаксис у руби весьма легкий, названия методов информативные. Так что даже не знакомый с языком человек (обладающий навыками алгоритмизации) поймет, что именно делает приведенный код.
+(Rusrails: Ruby on Rails по-русски)</p>
+
+<p>Нижеприведенные ресурсы на аглийском языке, хотя без элеметарного знания оного в программировании особо нечего делать (как мне кажется)</p>
+
+<h2><a href="http://guides.rubyonrails.org/index.html">RailsGuides</a></h2>
+
+<p>Оригинал документации для RoR. Хотя Rusrails и содержит &ldquo;грамотный&rdquo; и перевод документации, но лично мне иногда проще читать документацию в оригинале. Да и часто оказывается, что не вся документация переведена.</p>
+
+<h2><a href="https://rubymonk.com">RubyMonk</a></h2>
+
+<p>Для детального изучения, углубления в руби просто необходимый сайт. Обучение проходит в интерактивном способе от имени монаха.
+Пригодится, даже знакомым с руби людям. Особенно полезны, разделы посвященные метапрограмированию. Имено с его помощью, происходит большая часть &ldquo;магии&rdquo; RoR.
+More ramen to you! ;)</p>
+
+<h2><a href="http://www.codewars.com/">CodeWars</a></h2>
+
+<p>Чтобы оттачивать мастерство, советую зарегистрироваться и попробовать. Сайт дает возможность попробовать реализовывать простые алгоритмы. Все происходит в игровой форме. Вобщем, особо много рассказывать не буду, лучше просто зарегистрироваться и попробовать.
+Помимо Ruby, присутствуют Python, Javascript, Java.</p>
+
+<h2><a href="https://www.codeschool.com/">Code School</a></h2>
+
+<p>Просто необходимый в запасе архив различного видео. Тематика видео совершенно различная, каждая тема содержит после себя ряд упражнений для закрепления пройденого материала. Одним словом musthave</p>
+
+<hr />
+
+<p>Лично для себя нашел также весьма интересный способ развития - ходить на собеседования. Помимо того, что можно работу получить, можно вынести, во-первых, свой реальный уровень знаний, а также, что необходимо подучить\доучить. Данный раздел возможно будет пополняться ссылками, если вспомню\найду еще что-либо полезное.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Необходимые Gems для Rails]]></title>
+    <link href="http://addicted2sounds.github.io/octopress/neohhodimyie-gems-dlia-rails.html"/>
+    <updated>2015-04-25T08:49:47+03:00</updated>
+    <id>http://addicted2sounds.github.io/octopress/neohhodimyie-gems-dlia-rails</id>
+    <content type="html"><![CDATA[<p>Rails - замечательный фреймворк. С его использованием разработка становится легкой и приятной.</p>
+
+<p>При разработке нового проекта постоянно приходится добавлять некоторые гемы. Ниже представлен обновляющийся список необходимых.</p>
+
+<!--more-->
+
+
+<h3>Haml</h3>
+
+<p>Вы еще не используете <a href="http://haml.info/">HAML</a>? Для меня обычный Erb утрачен с его поялением. Попробуйте <a href="http://haml.info/tutorial.html">tutorial</a></p>
+
+<pre><code>gem "haml-rails", "~&gt; 0.9"
+</code></pre>
+
+<p>Для конвертации ваших erb в haml есть следущая команда:</p>
+
+<pre><code>rake haml:erb2haml
+</code></pre>
+
+<h3>Rspec</h3>
+
+<p>На Rails писать тесты <a href="http://rusrails.ru/a-guide-to-testing-rails-applications">просто и приятно</a>. С Rspec это делать еще легче. Если только знакомитесь с rspec, то обязательно прочитайте <a href="http://betterspecs.org/ru/">это</a></p>
+
+<pre><code>group :development, :test do
+  gem 'rspec-rails'
+end
+</code></pre>
+
+<p>С началом использования тестов, браузер при разработке используется все реже и реже. Для ин</p>
+
+<pre><code>rails generate rspec:install
+</code></pre>
+
+<h3>Factory Girl</h3>
+
+<p>Отличная замена стандартным фикстурам. Про &ldquo;плюсы&rdquo; использования написано уже предостаточно.</p>
+
+<pre><code>group :development, :test do
+  gem 'factory_girl_rails'
+end
+</code></pre>
+
+<p><a href="https://github.com/thoughtbot/factory_girl_rails">Официальный репозиторий</a>. Для удобства можно добавить в <code>spec/rails_helper.rb</code></p>
+
+<pre><code>config.include FactoryGirl::Syntax::Methods
+</code></pre>
+
+<h3>Faker</h3>
+
+<p>Можно и самому писать придуманные строчки и данные, но гораздо легче и приятней воспользоваться <a href="https://github.com/stympy/faker">Faker</a></p>
+
+<pre><code>group :development, :test do
+  gem 'faker'
+end
+</code></pre>
+
+<h3>Database cleaner</h3>
+
+<p>Не загрязнять нашу базу тестовыми данными поможет <a href="https://github.com/DatabaseCleaner/database_cleaner">Database Cleaner</a>.</p>
+
+<pre><code>group :development, :test do
+  gem 'database_cleaner'
+end
+</code></pre>
+
+<p>Для подключения в проект редактируем <code>spec/spec_helper.rb</code></p>
+
+<pre><code>RSpec.configure do |config|
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
+  end
+
+end
+</code></pre>
+
+<h3>Bootstrap</h3>
+
+<p>Для симпатичного внешнего вида лучшие косметологи мира рекомендуют <a href="http://getbootstrap.com/">Bootstrap</a></p>
+
+<pre><code>gem 'bootstrap-sass'
+</code></pre>
+
+<hr />
+
+<p>Поскольку эти гемы используются почти в каждом проекте, то при использовании rvm лучше установить их в глобальный gemset:</p>
+
+<pre><code>rvm @global do gem install rails haml-rails faker capistrano-rails factory_girl_rails database_cleaner
+</code></pre>
+
+<p>нужное - добавить, ненужное - убрать</p>
+]]></content>
+  </entry>
+  
+</feed>
