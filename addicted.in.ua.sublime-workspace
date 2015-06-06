@@ -3,8 +3,34 @@
 	{
 		"selected_items":
 		[
+			[
+				"feed",
+				"Feedburner"
+			]
 		]
 	},
+	"buffers":
+	[
+		{
+			"contents": "---\nlayout: post\ntitle: \"Необходимые gems для rails\"\ndate: 2015-04-25 08:49:47 +0300\ncomments: true\ncategories: \n---\nRails - замечательный фреймворк. С его использованием разработка становится легкой и приятной.\n\nПри разработке нового проекта постоянно приходится добавлять некоторые гемы. Ниже представлен обновляющийся список необходимых.\n<!--more-->\n###Haml\nВы еще не используете [HAML](http://haml.info/)? Для меня обычный Erb утрачен с его поялением. Попробуйте [tutorial](http://haml.info/tutorial.html) \n```\ngem \"haml-rails\", \"~> 0.9\"\n\n```\nДля конвертации ваших erb в haml есть следущая команда:\n```\nrake haml:erb2haml\n```\n\n###Rspec\nНа Rails писать тесты [просто и приятно](http://rusrails.ru/a-guide-to-testing-rails-applications). С Rspec это делать еще легче. Если только знакомитесь с rspec, то обязательно прочитайте [это](http://betterspecs.org/ru/)\n```\ngroup :development, :test do\n  gem 'rspec-rails'\nend\n\n```\nС началом использования тестов, браузер при разработке используется все реже и реже. Для ин\n```\nrails generate rspec:install\n\n```\n\n###Factory Girl\nОтличная замена стандартным фикстурам. Про \"плюсы\" использования написано уже предостаточно.\n```\ngroup :development, :test do\n  gem 'factory_girl_rails'\nend\n\n```\n[Официальный репозиторий](https://github.com/thoughtbot/factory_girl_rails). Для удобства можно добавить в `spec/rails_helper.rb`\n```\nconfig.include FactoryGirl::Syntax::Methods\n\n```\n\n###Faker\nМожно и самому писать придуманные строчки и данные, но гораздо легче и приятней воспользоваться [Faker](https://github.com/stympy/faker)\n\n```\ngroup :development, :test do\n  gem 'faker'\nend\n\n```\n\n###Database cleaner\nНе загрязнять нашу базу тестовыми данными поможет [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner). \n\n```\ngroup :development, :test do\n  gem 'database_cleaner'\nend\n\n```\nДля подключения в проект редактируем `spec/spec_helper.rb`\n\n```\nRSpec.configure do |config|\n\n  config.before(:suite) do\n    DatabaseCleaner.strategy = :transaction\n    DatabaseCleaner.clean_with(:truncation)\n  end\n\n  config.around(:each) do |example|\n    DatabaseCleaner.cleaning do\n      example.run\n    end\n  end\n\nend\n```\n###Bootstrap\nДля симпатичного внешнего вида лучшие косметологи мира рекомендуют [Bootstrap](http://getbootstrap.com/)\n```\ngem 'bootstrap-sass'\n\n```\n\n----\nПоскольку эти гемы используются почти в каждом проекте, то при использовании rvm лучше установить их в глобальный gemset:\n```\nrvm @global do gem install rails haml-rails faker capistrano-rails factory_girl_rails database_cleaner\n\n```\nнужное - добавить, ненужное - убрать",
+			"file": "source/_posts/2015-04-25-neohhodimyie-gems-dlia-rails.markdown",
+			"file_size": 3514,
+			"file_write_time": 130744292887443563,
+			"settings":
+			{
+				"buffer_size": 2582,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/addicted/.bashrc",
+			"settings":
+			{
+				"buffer_size": 3849,
+				"line_ending": "Unix"
+			}
+		}
+	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -44,8 +70,15 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/home/addicted/Projects/addicted.in.ua",
+		"/home/addicted/Projects/addicted.in.ua/source",
+		"/home/addicted/Projects/addicted.in.ua/source/_posts"
+	],
 	"file_history":
 	[
+		"/home/addicted/Projects/addicted.in.ua/source/_includes/facebook_like.html",
 		"/home/addicted/Projects/addicted.in.ua/source/_posts/2015-04-17-bystryi-start-s-docker.markdown",
 		"/home/addicted/Projects/addicted.in.ua/.gitignore",
 		"/home/addicted/Projects/wordpress/docker-compose.yml",
@@ -76,6 +109,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"feed",
 			"server",
 			"remember",
 			"\n   "
@@ -93,6 +127,71 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/_posts/2015-04-25-neohhodimyie-gems-dlia-rails.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2306,
+								2306
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1268.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/addicted/.bashrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3827,
+								3827
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1632.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 25.0
@@ -129,6 +228,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
+	"project": "addicted.in.ua.sublime-project",
 	"replace":
 	{
 		"height": 46.0
@@ -161,6 +261,7 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -168,7 +269,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 193.0,
+	"side_bar_width": 234.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
